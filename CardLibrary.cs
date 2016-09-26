@@ -19,10 +19,10 @@ namespace PokemonTCGMaster
 {
     public static class CardLibrary
     {
-        public static async Task<List<DataHelper.Card>> GetCards()
+        public static async Task<DataHelper.RootObject> GetCards()
         {
             string url = "https://api.pokemontcg.io/v1/cards";
-            List<DataHelper.Card> x = new List<DataHelper.Card>();
+            DataHelper.RootObject x = new DataHelper.RootObject();
 
             HttpClient client = new HttpClient(new NativeMessageHandler());
             var response = await client.GetAsync(url).ConfigureAwait(false); ;
@@ -30,7 +30,7 @@ namespace PokemonTCGMaster
             {
                 var content = response.Content;
                 string jsonString = await content.ReadAsStringAsync().ConfigureAwait(false);
-                x = JsonConvert.DeserializeObject<List<DataHelper.Card>>(jsonString);
+                x = JsonConvert.DeserializeObject<DataHelper.RootObject>(jsonString);
             }
             return x;
         }
