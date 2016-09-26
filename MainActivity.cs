@@ -34,7 +34,7 @@ namespace PokemonTCGMaster
 
             var a = FindViewById<TextView>(Resource.Id.mylabel);
 
-            a.Text = x.FirstOrDefault().ToString();
+            a.Text = x.cards.FirstOrDefault().ToString();
         }
     }
 }
