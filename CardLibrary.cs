@@ -25,11 +25,12 @@ namespace PokemonTCGMaster
             List<DataHelper.Card> x = new List<DataHelper.Card>();
 
             HttpClient client = new HttpClient(new NativeMessageHandler());
-            var response = await client.GetAsync(url);
-            if (true)
+            var response = await client.GetAsync(url).ConfigureAwait(false); ;
+            if (response.IsSuccessStatusCode)
             {
-                var content = await response.Content.ReadAsStringAsync();
-                x = JsonConvert.DeserializeObject<List<DataHelper.Card>>(content);
+                var content = response.Content;
+                string jsonString = await content.ReadAsStringAsync().ConfigureAwait(false);
+                x = JsonConvert.DeserializeObject<List<DataHelper.Card>>(jsonString);
             }
             return x;
         }
