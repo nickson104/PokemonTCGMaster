@@ -9,17 +9,31 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using System.Net.Http;
+using ModernHttpClient;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+
 
 namespace PokemonTCGMaster
 {
-    [Activity(Label = "CardLibrary")]
-    public class CardLibrary : Activity
+    public static class CardLibrary
     {
-        protected override void OnCreate(Bundle savedInstanceState)
+        public static async Task<List<DataHelper.Card>> GetCards()
         {
-            base.OnCreate(savedInstanceState);
+            string url = "https://api.pokemontcg.io/v1/cards";
+            List<DataHelper.Card> x = new List<DataHelper.Card>();
 
-            // Create your application here
+            HttpClient client = new HttpClient(new NativeMessageHandler());
+            var response = await client.GetAsync(url);
+            if (true)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                x = JsonConvert.DeserializeObject<List<DataHelper.Card>>(content);
+            }
+            return x;
         }
+
+
     }
 }
