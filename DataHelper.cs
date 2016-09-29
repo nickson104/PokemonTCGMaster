@@ -104,5 +104,13 @@ namespace PokemonTCGMaster
             public static string Base { get { return "Base"; } }
         }
 
+        public class Deck
+        {
+            public int DeckID { get; set; }
+            public string Name { get; set; }
+            public List<int> CardID { get; set; }
+            public bool Favourited { get; set; }
+        }
+
     }
 }

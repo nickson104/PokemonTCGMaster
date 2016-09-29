@@ -18,34 +18,57 @@ namespace PokemonTCGMaster
 
         protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate(bundle);
-
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-
-            GetCards();
-
-            
+            base.OnCreate(bundle);
+            var SearchCard = FindViewById<Button>(Resource.Id.SearchCard);
+            SearchCard.Click += (o,e) => { SearchCards(); };
+            var getcards = FindViewById<Button>(Resource.Id.GetCards);
+            getcards.Click += (o, e) => { GetCards(); };
+            //GetCards();      
         }
 
-        private async Task GetCards()
+        protected void SearchCards()
         {
-            //LinearLayout ll = (LinearLayout)FindViewById(Resource.Id.myLayout);
+            string searchCriteria = FindViewById<EditText>(Resource.Id.mytextbox).Text;
+            SearchCards(searchCriteria);
+        }
+
+        protected void GetCards()
+        {
+            GetCardsAsync();
+        }
+
+        private async Task GetCardsAsync()
+        {
             var newLayout = new ScrollView(this);
             var myGrid = new GridLayout(this);
             myGrid.ColumnCount = 4;
             var x = await APICaller.GetCards();
-            //var a = FindViewById<TextView>(Resource.Id.mylabel);
-            var b = FindViewById<FFImageLoading.Views.ImageViewAsync>(Resource.Id.myimage);
-
             //a.Text = x.cards.FirstOrDefault().name.ToString();
             foreach (var card in x.cards)
             {
                 var newImage = new FFImageLoading.Views.ImageViewAsync(this);
-                ImageService.Instance.LoadUrl(card.imageUrl).Into(newImage);
+                ImageService.Instance.LoadUrl(card.imageUrl).DownSample(width: 150).Into(newImage);
                 myGrid.AddView(newImage);
             }
             newLayout.AddView(myGrid);            
+            SetContentView(newLayout);
+        }
+        private async Task SearchCards(string param)
+        {
+            var newLayout = new ScrollView(this);
+            var myGrid = new GridLayout(this);
+            myGrid.ColumnCount = 4;
+            var x = await APICaller.SearchCards(param);
+            //a.Text = x.cards.FirstOrDefault().name.ToString();
+            foreach (var card in x.cards)
+            {
+                var newImage = new FFImageLoading.Views.ImageViewAsync(this);
+                ImageService.Instance.LoadUrl(card.imageUrl).DownSample(width: 150).Into(newImage);
+                myGrid.AddView(newImage);
+            }
+            newLayout.AddView(myGrid);
             SetContentView(newLayout);
         }
     }

@@ -7,13 +7,24 @@
   <LinearLayout android:id="@+id/myLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-    
-  <!--<TextView android:id="@+id/mylabel"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"/>-->
-  <FFImageLoading.Views.ImageViewAsync 
-            android:id="@+id/myimage"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"/>
+
+    <EditText android:id="@+id/mytextbox"
+            android:layout_width="0dp"
+            android:layout_height="25px"
+            android:layout_weight=".50"/>
+    <Button android:id="@+id/SearchCard"
+            android:layout_width="0dp"
+            android:layout_height="200px"
+            android:layout_weight=".25"
+            android:text="Search for Cards"/>
+    <Button android:id="@+id/GetCards"
+            android:layout_width="0dp"
+            android:layout_height="200px"
+            android:layout_weight=".25"
+            android:text="Get Cards"/>
+    <FFImageLoading.Views.ImageViewAsync
+              android:id="@+id/myimage"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"/>
   </LinearLayout>
 </LinearLayout>
