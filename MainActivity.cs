@@ -7,6 +7,7 @@ using Android.Widget;
 using Android.OS;
 using System.Linq;
 using System.Threading.Tasks;
+using FFImageLoading;
 
 namespace PokemonTCGMaster
 {
@@ -23,18 +24,29 @@ namespace PokemonTCGMaster
             SetContentView(Resource.Layout.Main);
 
             GetCards();
-            // Get our button from the layout resource,
-            // and attach an event to it
+
             
         }
 
         private async Task GetCards()
         {
-            var x = await CardLibrary.GetCards();
+            //LinearLayout ll = (LinearLayout)FindViewById(Resource.Id.myLayout);
+            var newLayout = new ScrollView(this);
+            var myGrid = new GridLayout(this);
+            myGrid.ColumnCount = 4;
+            var x = await APICaller.GetCards();
+            //var a = FindViewById<TextView>(Resource.Id.mylabel);
+            var b = FindViewById<FFImageLoading.Views.ImageViewAsync>(Resource.Id.myimage);
 
-            var a = FindViewById<TextView>(Resource.Id.mylabel);
-
-            a.Text = x.cards.FirstOrDefault().ToString();
+            //a.Text = x.cards.FirstOrDefault().name.ToString();
+            foreach (var card in x.cards)
+            {
+                var newImage = new FFImageLoading.Views.ImageViewAsync(this);
+                ImageService.Instance.LoadUrl(card.imageUrl).Into(newImage);
+                myGrid.AddView(newImage);
+            }
+            newLayout.AddView(myGrid);            
+            SetContentView(newLayout);
         }
     }
 }

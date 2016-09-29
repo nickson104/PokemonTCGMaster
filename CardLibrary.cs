@@ -17,12 +17,15 @@ using Newtonsoft.Json;
 
 namespace PokemonTCGMaster
 {
-    public static class CardLibrary
+    public static class APICaller
     {
-        public static async Task<DataHelper.RootObject> GetCards()
+        public static async Task<DataHelper.cards.RootObject> GetCards()
         {
-            string url = "https://api.pokemontcg.io/v1/cards";
-            DataHelper.RootObject x = new DataHelper.RootObject();
+            string url = "https://api.pokemontcg.io/v1/cards?";
+            url += "series=" + DataHelper.Series.XY;
+            url += "&pageSize=100";
+            // page=2 
+            DataHelper.cards.RootObject cards = new DataHelper.cards.RootObject();
 
             HttpClient client = new HttpClient(new NativeMessageHandler());
             var response = await client.GetAsync(url).ConfigureAwait(false); ;
@@ -30,11 +33,14 @@ namespace PokemonTCGMaster
             {
                 var content = response.Content;
                 string jsonString = await content.ReadAsStringAsync().ConfigureAwait(false);
-                x = JsonConvert.DeserializeObject<DataHelper.RootObject>(jsonString);
+                cards = JsonConvert.DeserializeObject<DataHelper.cards.RootObject>(jsonString);
             }
-            return x;
+            return cards;
         }
+    }
 
+    public static class CardLibrary
+    {
 
     }
 }

@@ -2,13 +2,16 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\obj\Debug\__library_projects__\FFImageLoading.Platform\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\obj\Debug\__library_projects__\ModernHttpClient\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\obj\Debug\__library_projects__\FFImageLoading.Platform\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\obj\Debug\__library_projects__\ModernHttpClient\library_project_imports\assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\obj\Debug\__library_projects__\FFImageLoading.Platform.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\obj\Debug\__library_projects__\ModernHttpClient.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

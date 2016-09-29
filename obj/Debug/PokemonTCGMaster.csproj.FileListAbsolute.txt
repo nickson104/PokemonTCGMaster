@@ -45,5 +45,9 @@ C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\obj\Debug\android\assets\Syst
 C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\bin\Debug\FFImageLoading.dll
+C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\bin\Debug\FFImageLoading.Platform.dll
+C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\bin\Debug\FFImageLoading.xml
+C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\bin\Debug\FFImageLoading.Platform.xml
 C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\obj\Debug\PokemonTCGMaster.dll.mdb
 C:\Users\hindern\Documents\GitHub\PokemonTCGMaster\bin\Debug\PokemonTCGMaster.dll.mdb
