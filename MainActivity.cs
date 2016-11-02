@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using FFImageLoading;
 using SQLite;
+using static PokemonTCGMaster.DataHelper;
 
 namespace PokemonTCGMaster
 {
@@ -99,12 +100,12 @@ namespace PokemonTCGMaster
 
 
 
-        private void InsertIntoDatabase(DataHelper.apiCards.Card card)
+        private void InsertIntoDatabase(apiCards.Card card)
         {
-            var db = new SQLiteConnection(DataHelper.databasePath);
-            if (!db.Table<DataHelper.myCards.Card>().Any(c=>c.set == card.set && c.number == card.number))
+            var db = new SQLiteConnection(databasePath);
+            if (!db.Table<myCards.Card>().Any(c=>c.set == card.set && c.number == card.number))
             {
-                DataHelper.myCards.Card myCard = new DataHelper.myCards.Card
+                myCards.Card myCard = new DataHelper.myCards.Card
                 {
                     artist = card.artist,
                     hp = card.hp,
