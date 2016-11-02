@@ -71,16 +71,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CardLibrary.cs" />
+    <Compile Include="CommonMethods.cs" />
     <Compile Include="DataHelper.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLite.cs" />
+    <Compile Include="SQLiteAsync.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\PokemonTCGMaster.PokemonTCGMaster-Signed.apk" />
+    <None Include="bin\Debug\PokemonTCGMaster.PokemonTCGMaster.apk" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages\modernhttpclient.2.4.2\lib\ModernHttpClient-2.4.1.zip" />
+    <None Include="packages\modernhttpclient.2.4.2\modernhttpclient.2.4.2.nupkg" />
+    <None Include="packages\Newtonsoft.Json.9.0.1\Newtonsoft.Json.9.0.1.nupkg" />
+    <None Include="packages\Newtonsoft.Json.9.0.1\tools\install.ps1" />
+    <None Include="packages\Xamarin.FFImageLoading.2.1.8\Xamarin.FFImageLoading.2.1.8.nupkg" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
@@ -99,6 +112,114 @@
     <None Include="Properties\AndroidManifest.xml">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\FFImageLoading.dll" />
+    <Content Include="bin\Debug\FFImageLoading.Platform.dll" />
+    <Content Include="bin\Debug\FFImageLoading.Platform.xml" />
+    <Content Include="bin\Debug\FFImageLoading.xml" />
+    <Content Include="bin\Debug\Java.Interop.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\Microsoft.CSharp.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\ModernHttpClient.dll" />
+    <Content Include="bin\Debug\ModernHttpClient.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\Mono.Android.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\Mono.CSharp.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\mscorlib.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\OkHttp.dll" />
+    <Content Include="bin\Debug\PokemonTCGMaster.dll" />
+    <Content Include="bin\Debug\PokemonTCGMaster.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\PokemonTCGMaster.pdb" />
+    <Content Include="bin\Debug\System.ComponentModel.Composition.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\System.Core.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\System.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\System.Net.Http.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\System.Runtime.Serialization.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\System.ServiceModel.Internals.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\System.Xml.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\System.Xml.Linq.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\modernhttpclient.2.4.2\lib\MonoAndroid\ModernHttpClient.dll" />
+    <Content Include="packages\modernhttpclient.2.4.2\lib\MonoAndroid\ModernHttpClient.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\modernhttpclient.2.4.2\lib\MonoAndroid\OkHttp.dll" />
+    <Content Include="packages\modernhttpclient.2.4.2\lib\MonoTouch\ModernHttpClient.dll" />
+    <Content Include="packages\modernhttpclient.2.4.2\lib\MonoTouch\ModernHttpClient.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll" />
+    <Content Include="packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\modernhttpclient.2.4.2\lib\Xamarin.iOS10\ModernHttpClient.dll" />
+    <Content Include="packages\modernhttpclient.2.4.2\lib\Xamarin.iOS10\ModernHttpClient.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net20\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net35\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\netstandard1.0\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\netstandard1.0\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.xml" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\MonoAndroid10\FFImageLoading.dll" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\MonoAndroid10\FFImageLoading.Platform.dll" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\MonoAndroid10\FFImageLoading.Platform.xml" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\MonoAndroid10\FFImageLoading.xml" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\portable-net45+win8+wpa81+wp8\FFImageLoading.dll" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\portable-net45+win8+wpa81+wp8\FFImageLoading.Platform.dll" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\portable-net45+win8+wpa81+wp8\FFImageLoading.Platform.xml" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\portable-net45+win8+wpa81+wp8\FFImageLoading.xml" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\portable-netcore45+wpa81\FFImageLoading.dll" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\portable-netcore45+wpa81\FFImageLoading.Platform.dll" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\portable-netcore45+wpa81\FFImageLoading.Platform.xml" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\portable-netcore45+wpa81\FFImageLoading.xml" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\portable-wp8\FFImageLoading.dll" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\portable-wp8\FFImageLoading.Platform.dll" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\portable-wp8\FFImageLoading.Platform.xml" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\portable-wp8\FFImageLoading.xml" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\Xamarin.iOS10\FFImageLoading.dll" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\Xamarin.iOS10\FFImageLoading.Platform.dll" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\Xamarin.iOS10\FFImageLoading.Platform.xml" />
+    <Content Include="packages\Xamarin.FFImageLoading.2.1.8\lib\Xamarin.iOS10\FFImageLoading.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
